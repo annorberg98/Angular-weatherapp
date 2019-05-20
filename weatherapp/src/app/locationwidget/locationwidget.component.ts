@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 
 @Component({
   selector: 'app-locationwidget',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./locationwidget.component.css']
 })
 export class LocationwidgetComponent implements OnInit {
+  public location: Object = {};
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.getLocation();
+  }
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.location = position.coords;
+        console.log(position.coords);
+      })
+    }
   }
 
 }
