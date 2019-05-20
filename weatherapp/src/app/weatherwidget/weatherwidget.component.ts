@@ -19,9 +19,13 @@ export class WeatherwidgetComponent implements OnInit {
   public getWeather() {
     //this.httpservice.getWeatherData();
     this.rawWeatherData = this.httpservice.rawData;
+    this.rawWeatherData.main.temp = this.KelvinToCelsius(this.rawWeatherData.main.temp);
   }
 
   ngOnInit() {
   }
 
+  KelvinToCelsius(kelvin) {
+    return kelvin - 273.15;
+  }
 }

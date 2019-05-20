@@ -12,7 +12,20 @@ export class HttpService {
   // URL format: api.openweathermap.org/data/2.5/weather?APPID={apikey}&lat={latitude}&lon={longitude}
   private apiUrl: string = "https://api.openweathermap.org/data/2.5/weather";
 
-  public rawData = { "coord": { "lon": 13, "lat": 55.6 }, "weather": [{ "id": 803, "main": "Clouds", "description": "broken clouds", "icon": "04d" }], "base": "stations", "main": { "temp": 292.81, "pressure": 1008, "humidity": 82, "temp_min": 290.15, "temp_max": 294.82 }, "visibility": 10000, "wind": { "speed": 4.1, "deg": 30 }, "clouds": { "all": 75 }, "dt": 1558352646, "sys": { "type": 1, "id": 1575, "message": 0.0074, "country": "SE", "sunrise": 1558320566, "sunset": 1558379991 }, "id": 2712995, "name": "Gamla Staden", "cod": 200 };
+  public rawData = {
+    "coord": { "lon": 13, "lat": 55.6 },
+    "weather": [{ "id": 803, "main": "Clouds", "description": "broken clouds", "icon": "04d" }],
+    "base": "stations",
+    "main": { "temp": 292.81, "pressure": 1008, "humidity": 82, "temp_min": 290.15, "temp_max": 294.82 },
+    "visibility": 10000,
+    "wind": { "speed": 4.1, "deg": 30 },
+    "clouds": { "all": 75 },
+    "dt": 1558352646,
+    "sys": { "type": 1, "id": 1575, "message": 0.0074, "country": "SE", "sunrise": 1558320566, "sunset": 1558379991 },
+    "id": 2712995,
+    "name": "Gamla Staden",
+    "cod": 200
+  };
 
   constructor(private http: HttpClient) {
     //this.getConfig();
