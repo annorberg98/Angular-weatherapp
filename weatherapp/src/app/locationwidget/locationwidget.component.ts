@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-locationwidget',
@@ -8,7 +9,7 @@ import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrie
 })
 export class LocationwidgetComponent implements OnInit {
   public location: Object = {};
-  constructor() {
+  constructor(private http: HttpService) {
 
   }
 
