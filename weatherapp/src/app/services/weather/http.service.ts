@@ -31,7 +31,9 @@ export class HttpService {
     //this.getConfig();
   }
 
-  public getWeatherData() {
+  public getWeatherData(coords: Object) {
+    /*let lat = coords.latitude;
+    let long = coords.latitude;*/
     let params = new HttpParams().set('APPID', this.apiKey).set('lat', this.tempLat).set('lon', this.tempLong);
 
     this.http.get(this.apiUrl, { params }).subscribe(data => console.log(data));
