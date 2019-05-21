@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
-import { HttpService } from '../http.service';
+import { HttpService } from '../services/weather/http.service';
 
 @Component({
   selector: 'app-locationwidget',
