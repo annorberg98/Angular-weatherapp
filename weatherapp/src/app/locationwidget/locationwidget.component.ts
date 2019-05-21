@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 import { HttpService } from '../services/weather/http.service';
+import { LocationService } from '../services/location/location.service';
 
 @Component({
   selector: 'app-locationwidget',
@@ -8,21 +9,14 @@ import { HttpService } from '../services/weather/http.service';
   styleUrls: ['./locationwidget.component.css']
 })
 export class LocationwidgetComponent implements OnInit {
-  public location: Object = {};
-  constructor(private http: HttpService) {
+  constructor(private http: HttpService, private locationservice: LocationService) {
 
   }
 
   ngOnInit() {
-    this.getLocation();
+    this.locationservice.getLocation();
   }
-  getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.location = position.coords;
-        console.log(position.coords);
-      })
-    }
-  }
+
+
 
 }
