@@ -15,3 +15,13 @@
 #weather img {
   float: left;
 }
+
+@media screen and (max-width: 480px) {
+  /*
+      Egenskaper för mobiler
+    */
+
+  div.card {
+    width: 100vw;
+  }
+}

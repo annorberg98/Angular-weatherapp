@@ -1,0 +1,44 @@
+body {
+  width: 100%;
+  padding: 0%;
+}
+
+.card {
+  width: 30vw;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  background-color: rgb(194, 194, 194);
+  border: 3px solid rgba(0, 0, 0, 0.125);
+}
+.card > .card-body > #weather {
+  margin: 0px;
+  float: left;
+  width: 90%;
+}
+#weather img {
+  float: left;
+}
+
+@media screen and (max-width: 480px) {
+  /*
+        Egenskaper för mobiler
+      */
+
+  div.card {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  /*
+      Egenskaper för tablets
+    */
+}
+
+@media screen and (min-width: 1025px) {
+  /*
+      Egenskaper för desktop
+    */
+}
