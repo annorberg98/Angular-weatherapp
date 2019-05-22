@@ -10,6 +10,17 @@ export class SearchBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.onHover();
+  }
+
+  onHover = function () {
+    var button = document.getElementById("submit");
+    var row = document.getElementsByClassName("row").onMouseHover = function () { onMouseHover() };
+
+
+
+
+    console.log(row);
   }
 
 }

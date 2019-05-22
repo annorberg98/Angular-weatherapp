@@ -75,3 +75,14 @@
     border: none;
     outline: none;
 }
+
+.row>.col-1>button {
+    color: blue;
+    border-left: 1px solid rgb(143, 143, 143);
+    border-radius: 0;
+}
+
+.row>.col-1>button:hover,
+.row>.col-1>button:focus {
+    border: none;
+}
